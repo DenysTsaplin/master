@@ -1,0 +1,30 @@
+<script>
+    var income = +prompt("Enter taxable income");
+
+		var taxRates = [0.10, 0.12, 0.22, 0.24, 0.32, 0.35, 0.37];
+		var tax = income * taxRates;	
+		if (income < 9525) {
+			tax = income * taxRates[0];
+		}	
+		else if (income >= 9526 && income <= 38700){
+			tax = (income - 9525) * taxRates[1] + 952.5;
+		}	
+		else if (income >= 38701 && income <= 82500){
+			tax = (income - 38700) * taxRates[2] + 4453.5;
+		}	
+		else if (income >= 82501 && income <= 157500){
+			tax = (income - 82500) * taxRates[3] + 14089.50;
+		}    
+		else if (income >= 157501 && income <= 200000){
+			tax = (income - 157500) * taxRates[4] + 32089.50;
+		}     
+		else if (income >= 200001 && income <= 500000){
+			tax = (income - 200000) * taxRates[5] + 45689.50;
+		}  
+		else if (income >= 500001){
+			tax = (income - 500000) * taxRates[6] + 150689.50;
+		}  
+    console.log ("Federal Income Tax:", tax); 
+	
+  
+</script>
